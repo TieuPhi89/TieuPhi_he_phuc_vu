@@ -1,0 +1,60 @@
+Tạo Dịch vụ với NODEJS
+
+b1 - Tạo thư mục: he_phuc_vu
+b2 - Tạo tập tin: package.json -> 
+    Lưu trữ thông tin của Ứng dụng 
+    và các thư viện hỗ trợ
+    Tab Terminal: npm init -y
+
+
+*** Cài đặt các module: 
+        npm i <module name> --s
+        npm i <module name@x.x.x> --s
+    Module sendMail Google: nodemailer
+    Module CRUD CSDL MongoDB: mongodb
+*** Gỡ Cài đặt các module: npm uninstall <module name> --s
+    npm uninstall nodemailer --s
+
+*** Cài đặt các module trong tập tin package.json
+    npm i
+======================================================================
+b3 Tạo tập tin service.js
+b4 Thực thi Dịch vụ: Chọn một trong 3 cách sau
+  b4.1 - Debug
+    start: F5
+    restart: Ctrl + Shift + F5
+    stop: Shift + F5
+  b4.2 - node  Tab Terminal 
+    start: node .\service.js
+    stop: Ctrl + C
+  b4.3 - npm  Tab Terminal
+    b4.3.1
+        open package.json
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "start": "node ./service.js"
+        },
+    b4.3.2
+        start: npm start
+        stop: CTRL+C => Y
+======================================================================
+b5 Test API 
+    Cài đặt: Extensions vscode: rest client
+Phương thức: 
+    GET lấy dữ liệu
+    
+    POST:  Thêm dữ liệu 
+    PUT: Cập nhật 
+    DELETE: Xóa
+========================================
+Quản lý các biến môi trường trong ứng dụng node
+    b1 Cài đặt thư viện: npm i dotenv --s
+    b2 Tạo tập tin: .env
+        PORT=8080
+    
+    b3 Tham chiếu tập tin biến môi trường .env
+        require("dotenv").config();
+    b4 get 
+        const port = process.env.PORT;    
+
+    

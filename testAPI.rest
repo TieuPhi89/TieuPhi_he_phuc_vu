@@ -1,0 +1,55 @@
+GET http://localhost:8080/dsTivi
+###
+GET http://localhost:8080/dsDienthoai
+###
+GET http://localhost:8080/Cuahang
+###
+GET http://localhost:8080/dsMathang
+###
+GET http://localhost:8080/dsNguoidung
+###
+POST http://localhost:8080/sendMail
+###
+POST http://localhost:8080/Login
+Content-Type: application/json
+
+{
+    "Ten_Dang_nhap": "NV_1",
+    "Mat_khau": "NV_1"
+}
+
+###
+POST http://localhost:8080/SignUp
+Content-Type: application/json
+
+{
+    "Ho_ten": "Nguyễn Anh Tuấn",
+    "Ma_so": "QL_100",
+    "Ten_Dang_nhap": "natuan",
+    "Mat_khau": "tuan123456",
+    "Nhom_Nguoi_dung": {
+      "Ten": "Nhân viên Quản lý",
+      "Ma_so": "NHAN_VIEN_QUAN_LY"
+    }
+  }
+###
+PUT http://localhost:8080/UpdateUser
+Content-Type: application/json
+
+{
+   
+    "Ten_Dang_nhap": "natuan",
+    "Mat_khau": "tuan123456",
+    "Mat_khau_Moi": "tuanjavascript"
+}
+###
+DELETE http://localhost:8080/DeleteUser
+Content-Type: application/json
+
+{
+  "Ma_so":"QL_100"
+}
+### 
+GET http://localhost:8080/TIVI_100.png
+###
+GET http://localhost:8080/TIVI_2.png 
